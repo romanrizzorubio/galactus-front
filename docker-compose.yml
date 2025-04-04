@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    image: nodeimage
+    image: nodefront
     container_name: nodeserver
     build: ./
     restart: always
