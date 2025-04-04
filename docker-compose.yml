@@ -2,7 +2,7 @@ version: "3"
 services:
   app:
     image: nodefront
-    container_name: nodeserver
+    container_name: nodefront
     build: ./
     restart: always
     ports:
