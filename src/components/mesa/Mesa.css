@@ -1,0 +1,21 @@
+body {
+  background-image: url(../../img/cosmico4.jpeg);
+  background-size: cover;
+}
+
+.mesa {
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+h1 {
+  color: #e5a0df;
+  padding: 16px 0;
+  margin: 0;
+  font-size: 64px;
+}
+
+.mesa .container {
+  width: 60%;
+  margin: 0 auto;
+}

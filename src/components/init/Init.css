@@ -1,0 +1,21 @@
+body {
+  background-image: url(../../img/cosmico4.jpeg);
+  background-size: cover;
+}
+
+.init {
+  text-align: center;
+  height: 100vh;
+  color: white;
+}
+
+.init .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.init .container input {
+  margin: 0 8px;
+}

@@ -1,0 +1,20 @@
+.progress {
+  margin-top: 16px;
+  width: 100%;
+  height: 32px;
+  pointer-events: none;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #d54242;
+  pointer-events: none;
+}
+
+.progress-bar.medium {
+  background-color: #dea756;
+}
+
+.progress-bar.high {
+  background-color: #53c553;
+}

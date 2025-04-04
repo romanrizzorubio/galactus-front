@@ -1,0 +1,31 @@
+body {
+  background-image: url(../../img/cosmico4.jpeg);
+  background-size: cover;
+}
+
+.app {
+  text-align: center;
+}
+
+.app h1 {
+  color: #e5a0df;
+  margin: 0;
+  font-size: 128px;
+}
+
+.app h2 {
+  color: #e5a0df;
+  margin: 0;
+  font-size: 64px;
+}
+
+.app .container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.app .container .panel {
+  padding: 32px;
+}
