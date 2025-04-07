@@ -32,11 +32,9 @@ class Panel extends Component {
   }
 
   render() {
-    const {type} = this.props;
-
     return (
       <div className={this.imgClassName}>
-        <img src={this.img}/>
+        <img src={this.img} alt=""/>
         {this.props.children}
       </div>
     );

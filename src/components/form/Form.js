@@ -16,16 +16,16 @@ class Form extends Component {
     return (
       <div className="form">
         <div className="negativos">
-          <a className="button" href="#" onClick={this.addHandler(-10)}>-10</a>
-          <a className="button" href="#" onClick={this.addHandler(-5)}>-5</a>
-          <a className="button" href="#" onClick={this.addHandler(-3)}>-3</a>
-          <a className="button" href="#" onClick={this.addHandler(-1)}>-1</a>
+          <button className="button" href="#" onClick={this.addHandler(-10)}>-10</button>
+          <button className="button" href="#" onClick={this.addHandler(-5)}>-5</button>
+          <button className="button" href="#" onClick={this.addHandler(-3)}>-3</button>
+          <button className="button" href="#" onClick={this.addHandler(-1)}>-1</button>
         </div>
         <div className="positivos">
-          <a className="button" href="#" onClick={this.addHandler(10)}>+10</a>
-          <a className="button" href="#" onClick={this.addHandler(5)}>+5</a>
-          <a className="button" href="#" onClick={this.addHandler(3)}>+3</a>
-          <a className="button" href="#" onClick={this.addHandler(1)}>+1</a>
+          <button className="button" href="#" onClick={this.addHandler(10)}>+10</button>
+          <button className="button" href="#" onClick={this.addHandler(5)}>+5</button>
+          <button className="button" href="#" onClick={this.addHandler(3)}>+3</button>
+          <button className="button" href="#" onClick={this.addHandler(1)}>+1</button>
         </div>
       </div>
     );
