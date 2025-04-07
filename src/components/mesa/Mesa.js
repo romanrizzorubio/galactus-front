@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import './Mesa.css';
-import Panel from "../panel/Panel";
-import Form from "../form/Form";
-import Api from "../../api/Api";
+import Panel from "../panel/Panel.js";
+import Form from "../form/Form.js";
+import Api from "../../api/Api.js";
 
 class Mesa extends Component {
   constructor(props) {

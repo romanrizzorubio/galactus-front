@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import './App.css';
-import Panel from "../panel/Panel";
-import Progress from "../progress/Progress";
-import Timer from "../timer/Timer";
-import Api from "../../api/Api";
+import Panel from "../panel/Panel.js";
+import Progress from "../progress/Progress.js";
+import Timer from "../timer/Timer.js";
+import Api from "../../api/Api.js";
 
 class App extends Component {
   constructor(props) {

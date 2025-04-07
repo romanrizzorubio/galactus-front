@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './Init.css';
-import Api from "../../api/Api";
+import Api from "../../api/Api.js";
 
 class Init extends Component {
   constructor(props) {
