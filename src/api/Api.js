@@ -1,4 +1,4 @@
-const host = 'http://localhost:4000'
+const host = `http://${window.location.hostname}:4000`
 
 export default class Api {
   static get(endpoint) {
