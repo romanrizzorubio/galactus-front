@@ -3,10 +3,12 @@
   background-color: #e5a0df;
   color: #482e45;
   margin: 8px;
-  width: 32px;
-  padding: 4px;
+  width: 40px;
+  padding: 8px;
   text-decoration: none;
+  text-align: center;
   display: inline-block;
   vertical-align: baseline;
-  font-weight: 500;
+  font-weight: bolder;
+  border: none;
 }
