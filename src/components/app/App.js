@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import './App.css';
 import Panel from "../panel/Panel.js";
 import Progress from "../progress/Progress.js";
-import Timer from "../timer/Timer.js";
 import Api from "../../api/Api.js";
 
 class App extends Component {
@@ -16,6 +15,7 @@ class App extends Component {
       solucion: 50,
       nulificador: 50,
       end: new Date(),
+      ended: false,
     }
   }
 
@@ -32,11 +32,32 @@ class App extends Component {
       });
   }
 
+  getTime(end) {
+    const now = new Date();
+    const time = new Date(end);
+
+    if (time.getTime() < now.getTime()) {
+      this.setState({
+        ...this.state,
+        ended: true,
+      })
+    }
+
+    const hour = time.getHours() - now.getHours();
+    const _minutes= time.getMinutes() - now.getMinutes();
+    const _seconds = time.getSeconds() - now.getSeconds();
+
+    const minutes = _minutes < 10 ? `0${_minutes}` : _minutes;
+    const seconds = _seconds < 10 ? `0${_seconds}` : _seconds;
+
+    return `${hour}:${minutes}:${seconds}`;
+  }
+
   setData(data) {
     const maquina = (data.maquina * 100) / data.maquinaMax;
     const solucion = (data.solucion * 100) / data.solucionMax;
     const nulificador = (data.nulificador * 100) / data.nulificadorMax;
-    const timer = (data.end - Date.now());
+    const timer = this.getTime(data.end);
 
     this.setState({
       numPlayers: data.players,
@@ -47,7 +68,7 @@ class App extends Component {
       nulificador,
     });
 
-    if (maquina < 100 && timer > 0 && nulificador > 0) {
+    if (maquina < 100 && !this.state.ended && nulificador > 0) {
       setTimeout(() => {
         this.load();
       }, 1000)
@@ -66,7 +87,7 @@ class App extends Component {
   }
 
   render() {
-    const {maquina, solucion, nulificador, timer, solucionDone} = this.state;
+    const {maquina, solucion, nulificador, timer, solucionDone, ended} = this.state;
 
     if (maquina >= 100) {
       return (
@@ -77,7 +98,7 @@ class App extends Component {
       );
     }
 
-    if (timer < 0) {
+    if (ended) {
       return (
         <div className="app">
           <h1>¡Fin del juego!</h1>
@@ -106,7 +127,7 @@ class App extends Component {
 
     return (
       <div className="app">
-        <h1><Timer time={timer} /></h1>
+        <h1>{timer}</h1>
         <div className="container">
           <Panel type="maquina">
             <Progress perc={maquina} invert/>
