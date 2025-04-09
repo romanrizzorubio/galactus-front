@@ -9,14 +9,17 @@ body {
 
 .app h1 {
   color: #e5a0df;
+  height: 20vh;
   margin: 0;
   font-size: 128px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 .app h2 {
   color: #e5a0df;
   margin: 0;
   font-size: 64px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .app .container {
@@ -24,8 +27,22 @@ body {
   justify-content: space-evenly;
   align-items: baseline;
   flex-direction: row;
+  height: 80vh;
 }
 
 .app .container .panel {
   padding: 32px;
+  height: 100%;
+}
+
+.app .container img {
+  height: 70%;
+}
+
+.app .container .progress {
+  height: 20%;
+}
+
+.app .container .progress-bar {
+  height: 60%;
 }
