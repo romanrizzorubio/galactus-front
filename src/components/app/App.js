@@ -43,9 +43,17 @@ class App extends Component {
       })
     }
 
-    const hour = time.getHours() - now.getHours();
-    const _minutes= time.getMinutes() - now.getMinutes();
-    const _seconds = time.getSeconds() - now.getSeconds();
+    let hour = time.getHours() - now.getHours();
+    let _minutes= time.getMinutes() - now.getMinutes();
+    let _seconds = time.getSeconds() - now.getSeconds();
+    if (_seconds < 0) {
+      _seconds = 60 + _seconds;
+      _minutes--;
+    }
+    if (_minutes < 0) {
+      _minutes = 60 + _minutes;
+      hour--;
+    }
 
     const minutes = _minutes < 10 ? `0${_minutes}` : _minutes;
     const seconds = _seconds < 10 ? `0${_seconds}` : _seconds;
